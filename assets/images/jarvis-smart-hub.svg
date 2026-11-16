@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <defs>
+    <radialGradient id="orbGlow" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#E0F7FF"/>
+      <stop offset="35%" stop-color="#00E5FF"/>
+      <stop offset="70%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#081426"/>
+    </radialGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#00E5FF" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="baseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="jarvisGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow in Dark Chamber -->
+  <circle cx="200" cy="105" r="95" fill="url(#coreGlow)"/>
+
+  <!-- Magnetic Floating Docking Pedestal -->
+  <ellipse cx="200" cy="200" rx="90" ry="22" fill="url(#baseGrad)" stroke="#334155" stroke-width="1.5"/>
+  <ellipse cx="200" cy="195" rx="70" ry="16" fill="#0A0F1D" stroke="#00E5FF" stroke-width="1.5" stroke-dasharray="6 3"/>
+  <ellipse cx="200" cy="190" rx="45" ry="10" fill="#020617" stroke="#FFB800" stroke-width="1.2"/>
+
+  <!-- Levitation Energy Cones -->
+  <path d="M170 185 L185 155 L215 155 L230 185 Z" fill="url(#coreGlow)" opacity="0.4"/>
+  <line x1="185" y1="187" x2="215" y2="187" stroke="#00E5FF" stroke-width="2"/>
+
+  <!-- Orbital Holographic Rings around Orb -->
+  <ellipse cx="200" cy="105" rx="78" ry="24" fill="none" stroke="#00E5FF" stroke-width="1" stroke-dasharray="8 4 2 4" transform="rotate(-20 200 105)" opacity="0.8"/>
+  <ellipse cx="200" cy="105" rx="72" ry="28" fill="none" stroke="#38BDF8" stroke-width="1.2" transform="rotate(35 200 105)" opacity="0.6"/>
+  <circle cx="265" cy="85" r="3" fill="#FFB800" filter="url(#jarvisGlow)"/>
+  <circle cx="138" cy="120" r="2.5" fill="#00E5FF"/>
+
+  <!-- The J.A.R.V.I.S. Sphere / AI Core -->
+  <circle cx="200" cy="105" r="52" fill="url(#orbGlow)"/>
+  
+  <!-- Cybernetic Geometric Panels on the Sphere -->
+  <path d="M165 95 C175 75, 225 75, 235 95" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-opacity="0.8"/>
+  <path d="M160 112 C180 135, 220 135, 240 112" fill="none" stroke="#00E5FF" stroke-width="1.5"/>
+  <circle cx="200" cy="105" r="16" fill="#050C1A" stroke="#00E5FF" stroke-width="2" filter="url(#jarvisGlow)"/>
+  <circle cx="200" cy="105" r="6" fill="#FFFFFF"/>
+
+  <!-- Quantum Neural Nodes -->
+  <circle cx="180" cy="90" r="2" fill="#00E5FF"/>
+  <circle cx="220" cy="90" r="2" fill="#00E5FF"/>
+  <line x1="180" y1="90" x2="195" y2="100" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.7"/>
+  <line x1="220" y1="90" x2="205" y2="100" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.7"/>
+
+  <!-- Specular Lens Flare Reflection -->
+  <ellipse cx="182" cy="78" rx="14" ry="7" fill="#FFFFFF" fill-opacity="0.65" transform="rotate(-30 182 78)"/>
+</svg>

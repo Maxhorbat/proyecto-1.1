@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <defs>
+    <radialGradient id="avGlowHappy" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="40" cy="40" r="38" fill="#0B132B" stroke="#00E5FF" stroke-width="2"/>
+  <circle cx="40" cy="40" r="34" fill="url(#avGlowHappy)"/>
+  <!-- Initials -->
+  <text x="40" y="47" font-family="'Orbitron', sans-serif" font-weight="900" font-size="22" fill="#FFFFFF" text-anchor="middle">HH</text>
+  <circle cx="64" cy="62" r="5" fill="#00E5FF" stroke="#0B132B" stroke-width="2"/>
+</svg>

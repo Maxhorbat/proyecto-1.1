@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <defs>
+    <radialGradient id="lensGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#00E5FF" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="frameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A374A"/>
+      <stop offset="50%" stop-color="#141C28"/>
+      <stop offset="100%" stop-color="#090E17"/>
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFB800"/>
+      <stop offset="100%" stop-color="#FFE600"/>
+    </linearGradient>
+    <filter id="neon" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Dark Studio Background Platform -->
+  <ellipse cx="200" cy="205" rx="140" ry="25" fill="#0A101D" />
+  <ellipse cx="200" cy="205" rx="110" ry="16" fill="#05080E" stroke="#1E293B" stroke-width="1.5" />
+  <ellipse cx="200" cy="205" rx="80" ry="10" fill="none" stroke="#00E5FF" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="4 4"/>
+
+  <!-- Left Lens Glow & Frame -->
+  <ellipse cx="140" cy="115" rx="55" ry="32" fill="url(#lensGlow)"/>
+  <!-- Right Lens Glow & Frame -->
+  <ellipse cx="260" cy="115" rx="55" ry="32" fill="url(#lensGlow)"/>
+
+  <!-- Glasses Frame Structure -->
+  <!-- Top Bridge Bar -->
+  <path d="M75 102 C110 88, 140 85, 200 88 C260 85, 290 88, 325 102 C330 104, 332 108, 328 112 C320 120, 315 125, 305 122 C285 116, 255 110, 200 112 C145 110, 115 116, 95 122 C85 125, 80 120, 72 112 C68 108, 70 104, 75 102 Z" fill="url(#frameGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+
+  <!-- Left Eyepiece Outer Rim -->
+  <path d="M85 108 C100 95, 175 95, 185 110 C190 125, 180 148, 155 152 C120 156, 85 142, 85 108 Z" fill="#0F172A" stroke="#00E5FF" stroke-width="2" filter="url(#neon)"/>
+  <!-- Right Eyepiece Outer Rim -->
+  <path d="M215 110 C225 95, 300 95, 315 108 C315 142, 280 156, 245 152 C220 148, 210 125, 215 110 Z" fill="#0F172A" stroke="#00E5FF" stroke-width="2" filter="url(#neon)"/>
+
+  <!-- HUD Telemetry Inside Left Lens -->
+  <circle cx="138" cy="120" r="14" fill="none" stroke="#00E5FF" stroke-width="1" stroke-dasharray="2 3"/>
+  <circle cx="138" cy="120" r="5" fill="#00E5FF" fill-opacity="0.6"/>
+  <line x1="110" y1="120" x2="166" y2="120" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="100" y="142" font-family="'Orbitron', sans-serif" font-size="7" fill="#00E5FF" font-weight="bold">TARGET ACQ // 99.8%</text>
+
+  <!-- HUD Telemetry Inside Right Lens -->
+  <circle cx="262" cy="120" r="14" fill="none" stroke="#00E5FF" stroke-width="1" stroke-dasharray="2 3"/>
+  <circle cx="262" cy="120" r="5" fill="#00E5FF" fill-opacity="0.6"/>
+  <line x1="234" y1="120" x2="290" y2="120" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="224" y="142" font-family="'Orbitron', sans-serif" font-size="7" fill="#FFB800" font-weight="bold">BIOMETRIC: OPTIMAL</text>
+
+  <!-- Nose Bridge Gold Accent -->
+  <rect x="195" y="98" width="10" height="15" rx="2" fill="url(#goldAccent)"/>
+  
+  <!-- Temple Arms / Ear Pieces perspective -->
+  <path d="M72 108 L30 115 L20 125 L40 123 L75 115 Z" fill="#1E293B"/>
+  <path d="M328 108 L370 115 L380 125 L360 123 L325 115 Z" fill="#1E293B"/>
+
+  <!-- Sleek Optical Reflection highlights -->
+  <path d="M100 106 Q140 102 170 116" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7"/>
+  <path d="M230 116 Q260 102 300 106" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7"/>
+</svg>

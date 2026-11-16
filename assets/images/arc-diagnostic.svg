@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" fill="none">
+  <defs>
+    <radialGradient id="diagGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.4"/>
+      <stop offset="60%" stop-color="#0284C7" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="wireBloom">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Dark Grid Background -->
+  <rect width="500" height="400" fill="#070C15"/>
+  <circle cx="250" cy="200" r="180" fill="url(#diagGlow)"/>
+
+  <!-- Perspective Grid Lines -->
+  <line x1="50" y1="200" x2="450" y2="200" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  <line x1="250" y1="20" x2="250" y2="380" stroke="#00E5FF" stroke-width="0.5" stroke-opacity="0.3"/>
+  <line x1="100" y1="50" x2="400" y2="350" stroke="#00E5FF" stroke-width="0.5" stroke-dasharray="4 4" stroke-opacity="0.2"/>
+  <line x1="400" y1="50" x2="100" y2="350" stroke="#00E5FF" stroke-width="0.5" stroke-dasharray="4 4" stroke-opacity="0.2"/>
+
+  <!-- Isometric / Circular Concentric Rings -->
+  <!-- Outer Ring 1 -->
+  <ellipse cx="250" cy="200" rx="170" ry="100" fill="none" stroke="#00E5FF" stroke-width="1.2" stroke-opacity="0.5" stroke-dasharray="6 3"/>
+  <!-- Outer Ring 2 -->
+  <ellipse cx="250" cy="200" rx="145" ry="85" fill="none" stroke="#38BDF8" stroke-width="1" stroke-dasharray="15 5"/>
+  <!-- Middle Ring with Sector notches -->
+  <ellipse cx="250" cy="200" rx="115" ry="68" fill="none" stroke="#00E5FF" stroke-width="1.8" filter="url(#wireBloom)"/>
+  <!-- Inner Ring -->
+  <ellipse cx="250" cy="200" rx="80" ry="48" fill="none" stroke="#FFB800" stroke-width="1.5"/>
+  <!-- Core Ring -->
+  <ellipse cx="250" cy="200" rx="45" ry="26" fill="none" stroke="#FFFFFF" stroke-width="2" filter="url(#wireBloom)"/>
+  <circle cx="250" cy="200" r="8" fill="#00E5FF" filter="url(#wireBloom)"/>
+
+  <!-- Diagnostic Radiating Wireframe Spines (12 Spines) -->
+  <path d="M250 100 L250 132 M250 268 L250 300" stroke="#00E5FF" stroke-width="2"/>
+  <path d="M80 200 L135 200 M365 200 L420 200" stroke="#00E5FF" stroke-width="2"/>
+  <path d="M125 130 L165 155 M335 245 L375 270" stroke="#00E5FF" stroke-width="1.5"/>
+  <path d="M375 130 L335 155 M165 245 L125 270" stroke="#00E5FF" stroke-width="1.5"/>
+
+  <!-- Angular HUD Reticles on Four Corners -->
+  <!-- Top Left -->
+  <path d="M20 40 L20 20 L40 20" fill="none" stroke="#00E5FF" stroke-width="2"/>
+  <text x="30" y="38" font-family="'Orbitron', monospace" font-size="9" fill="#00E5FF">LOC: 40.7128° N</text>
+
+  <!-- Top Right -->
+  <path d="M480 40 L480 20 L460 20" fill="none" stroke="#00E5FF" stroke-width="2"/>
+  <text x="390" y="38" font-family="'Orbitron', monospace" font-size="9" fill="#00E5FF">FREQ: 142.8 GHz</text>
+
+  <!-- Bottom Left -->
+  <path d="M20 360 L20 380 L40 380" fill="none" stroke="#00E5FF" stroke-width="2"/>
+  <text x="30" y="375" font-family="'Orbitron', monospace" font-size="9" fill="#FFB800">THERMAL: 0.02% ΔT</text>
+
+  <!-- Bottom Right -->
+  <path d="M480 360 L480 380 L460 380" fill="none" stroke="#00E5FF" stroke-width="2"/>
+  <text x="395" y="375" font-family="'Orbitron', monospace" font-size="9" fill="#00E5FF">FLUX: OPTIMAL</text>
+
+  <!-- Center Floating Coordinates and Telemetry Callouts -->
+  <polyline points="290,170 330,140 380,140" fill="none" stroke="#00E5FF" stroke-width="1"/>
+  <circle cx="290" cy="170" r="3" fill="#00E5FF"/>
+  <text x="335" y="134" font-family="'Orbitron', monospace" font-size="8" fill="#FFFFFF">PALLADIUM STABILIZER</text>
+
+  <polyline points="190,225 150,260 100,260" fill="none" stroke="#FFB800" stroke-width="1"/>
+  <circle cx="190" cy="225" r="3" fill="#FFB800"/>
+  <text x="100" y="254" font-family="'Orbitron', monospace" font-size="8" fill="#FFB800">OUTPUT: 3.2 GJ/SEC</text>
+</svg>

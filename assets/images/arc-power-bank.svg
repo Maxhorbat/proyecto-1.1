@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <defs>
+    <radialGradient id="arcGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#00E5FF"/>
+      <stop offset="70%" stop-color="#0284C7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="metalRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#64748B"/>
+      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="copper" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <filter id="arcBloom" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Light on Desk -->
+  <ellipse cx="200" cy="120" rx="140" ry="85" fill="url(#arcGlow)" opacity="0.35"/>
+  <ellipse cx="200" cy="195" rx="130" ry="22" fill="#040711" opacity="0.9"/>
+
+  <!-- Outer Armored Casing (Octagonal / Cylindrical Chamfer) -->
+  <circle cx="200" cy="120" r="90" fill="url(#metalRim)" stroke="#475569" stroke-width="2"/>
+  <circle cx="200" cy="120" r="84" fill="#090E17" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Outer Ring with Hex Screws and Stark Markings -->
+  <circle cx="200" cy="120" r="76" fill="#0F172A" stroke="#00E5FF" stroke-width="1.5" stroke-dasharray="8 6"/>
+
+  <!-- 10 Copper Electromagnetic Induction Coils -->
+  <!-- Rotating around the center -->
+  <g transform="translate(200, 120)">
+    <!-- Coil 1 -->
+    <rect x="-8" y="-72" width="16" height="18" rx="2" fill="url(#copper)" stroke="#78350F" stroke-width="0.8"/>
+    <!-- Coil 2 -->
+    <rect x="-8" y="-72" width="16" height="18" rx="2" fill="url(#copper)" stroke="#78350F" stroke-width="0.8" transform="rotate(36)"/>
+    <!-- Coil 3 -->
+    <rect x="-8" y="-72" width="16" height="18" rx="2" fill="url(#copper)" stroke="#78350F" stroke-width="0.8" transform="rotate(72)"/>
+    <!-- Coil 4 -->
+    <rect x="-8" y="-72" width="16" height="18" rx="2" fill="url(#copper)" stroke="#78350F" stroke-width="0.8" transform="rotate(108)"/>
+    <!-- Coil 5 -->
+    <rect x="-8" y="-72" width="16" height="18" rx="2" fill="url(#copper)" stroke="#78350F" stroke-width="0.8" transform="rotate(144)"/>
+    <!-- Coil 6 -->
+    <rect x="-8" y="-72" width="16" height="18" rx="2" fill="url(#copper)" stroke="#78350F" stroke-width="0.8" transform="rotate(180)"/>
+    <!-- Coil 7 -->
+    <rect x="-8" y="-72" width="16" height="18" rx="2" fill="url(#copper)" stroke="#78350F" stroke-width="0.8" transform="rotate(216)"/>
+    <!-- Coil 8 -->
+    <rect x="-8" y="-72" width="16" height="18" rx="2" fill="url(#copper)" stroke="#78350F" stroke-width="0.8" transform="rotate(252)"/>
+    <!-- Coil 9 -->
+    <rect x="-8" y="-72" width="16" height="18" rx="2" fill="url(#copper)" stroke="#78350F" stroke-width="0.8" transform="rotate(288)"/>
+    <!-- Coil 10 -->
+    <rect x="-8" y="-72" width="16" height="18" rx="2" fill="url(#copper)" stroke="#78350F" stroke-width="0.8" transform="rotate(324)"/>
+
+    <!-- Inner Metallic Ring with Wire Mesh -->
+    <circle cx="0" cy="0" r="48" fill="#030712" stroke="#FFB800" stroke-width="2"/>
+    <circle cx="0" cy="0" r="42" fill="#020817" stroke="#00E5FF" stroke-width="1" stroke-dasharray="4 2"/>
+
+    <!-- Luminous Energy Ring -->
+    <circle cx="0" cy="0" r="32" fill="none" stroke="#00E5FF" stroke-width="6" opacity="0.8" filter="url(#arcBloom)"/>
+    <circle cx="0" cy="0" r="32" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+
+    <!-- Inner Core Triangular Palladium Stabilizer -->
+    <polygon points="0,-24 20,12 -20,12" fill="#080E1C" stroke="#00E5FF" stroke-width="1.5"/>
+    <polygon points="0,-16 13,8 -13,8" fill="#00E5FF" fill-opacity="0.3"/>
+    
+    <!-- Central Pure White Photon Heart -->
+    <circle cx="0" cy="0" r="8" fill="#FFFFFF" filter="url(#arcBloom)"/>
+  </g>
+
+  <!-- Dual USB-C & Quantum Charging Ports Indicator -->
+  <rect x="180" y="210" width="40" height="6" rx="3" fill="#1E293B" stroke="#00E5FF" stroke-width="1"/>
+  <circle cx="168" cy="213" r="2" fill="#22C55E"/>
+</svg>

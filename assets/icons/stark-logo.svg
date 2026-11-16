@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 40" fill="none">
+  <!-- Stark Geometric Crest -->
+  <path d="M12 6L24 13L24 27L12 34L0 27L0 13L12 6Z" fill="none" stroke="#FFB800" stroke-width="2"/>
+  <path d="M12 10L20 15L20 25L12 30L4 25L4 15L12 10Z" fill="#FFB800" fill-opacity="0.15"/>
+  <path d="M8 20L12 13L16 20L12 27Z" fill="#00E5FF"/>
+  <circle cx="12" cy="20" r="2" fill="#FFFFFF"/>
+  
+  <!-- Text: STARK INDUSTRIES -->
+  <text x="36" y="24" font-family="'Orbitron', 'Segoe UI', sans-serif" font-weight="900" font-size="16" letter-spacing="3" fill="#FFFFFF">STARK</text>
+  <text x="115" y="24" font-family="'Rajdhani', 'Segoe UI', sans-serif" font-weight="700" font-size="15" letter-spacing="4" fill="#FFB800">INDUSTRIES</text>
+  <circle cx="230" cy="20" r="2.5" fill="#00E5FF"/>
+</svg>

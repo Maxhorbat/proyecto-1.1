@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <defs>
+    <radialGradient id="screenAmbient" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.3"/>
+      <stop offset="80%" stop-color="#0369A1" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="chassisGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="40%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0A0F1D"/>
+    </linearGradient>
+    <linearGradient id="holoScreen" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#082F49" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#0C4A6E" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0.85"/>
+    </linearGradient>
+    <filter id="screenGlow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient light -->
+  <ellipse cx="200" cy="120" rx="150" ry="80" fill="url(#screenAmbient)"/>
+
+  <!-- Shadow on surface -->
+  <polygon points="60,205 340,205 380,185 20,185" fill="#030712" opacity="0.8"/>
+
+  <!-- Laptop Base Chassis (Perspective view) -->
+  <polygon points="70,140 330,140 370,195 30,195" fill="url(#chassisGrad)" stroke="#475569" stroke-width="1.5"/>
+  <polygon points="30,195 370,195 365,202 35,202" fill="#0F172A"/>
+
+  <!-- Trackpad -->
+  <polygon points="160,178 240,178 245,192 155,192" fill="#0B132B" stroke="#00E5FF" stroke-width="0.8" stroke-opacity="0.7"/>
+
+  <!-- Illuminated Keyboard Island -->
+  <polygon points="90,145 310,145 330,174 70,174" fill="#050B14" stroke="#00E5FF" stroke-width="1"/>
+  
+  <!-- Keyboard Grid Keys Glow lines -->
+  <line x1="85" y1="151" x2="315" y2="151" stroke="#00E5FF" stroke-width="0.7" stroke-opacity="0.4"/>
+  <line x1="80" y1="158" x2="320" y2="158" stroke="#00E5FF" stroke-width="0.7" stroke-opacity="0.5"/>
+  <line x1="75" y1="166" x2="325" y2="166" stroke="#00E5FF" stroke-width="0.7" stroke-opacity="0.6"/>
+  <!-- Key column indicators -->
+  <line x1="120" y1="145" x2="110" y2="174" stroke="#00E5FF" stroke-width="0.6" stroke-opacity="0.3"/>
+  <line x1="160" y1="145" x2="155" y2="174" stroke="#00E5FF" stroke-width="0.6" stroke-opacity="0.3"/>
+  <line x1="200" y1="145" x2="200" y2="174" stroke="#00E5FF" stroke-width="0.6" stroke-opacity="0.3"/>
+  <line x1="240" y1="145" x2="245" y2="174" stroke="#00E5FF" stroke-width="0.6" stroke-opacity="0.3"/>
+  <line x1="280" y1="145" x2="290" y2="174" stroke="#00E5FF" stroke-width="0.6" stroke-opacity="0.3"/>
+
+  <!-- Screen Bezel (Tilted upward) -->
+  <polygon points="90,45 310,45 330,140 70,140" fill="#020617" stroke="#38BDF8" stroke-width="1.8"/>
+
+  <!-- Holographic Screen Panel -->
+  <polygon points="96,50 304,50 322,136 78,136" fill="url(#holoScreen)" filter="url(#screenGlow)" opacity="0.95"/>
+
+  <!-- Screen HUD Graphics / Telemetry -->
+  <text x="110" y="70" font-family="'Orbitron', monospace" font-size="8" fill="#FFFFFF" font-weight="bold">STARK OS // QUANTUM V9.4</text>
+  <text x="110" y="82" font-family="'Share Tech Mono', monospace" font-size="6" fill="#00E5FF">CORE: NEURAL MATRIX 128-QBIT</text>
+  <text x="110" y="92" font-family="'Share Tech Mono', monospace" font-size="6" fill="#A5F3FC">ENCRYPTION: DEFENSE LEVEL 0</text>
+  
+  <!-- Holographic Center Radar in Screen -->
+  <circle cx="250" cy="85" r="22" fill="none" stroke="#00E5FF" stroke-width="1" stroke-dasharray="3 2"/>
+  <circle cx="250" cy="85" r="10" fill="none" stroke="#FFB800" stroke-width="1"/>
+  <circle cx="250" cy="85" r="3" fill="#00E5FF"/>
+  <line x1="250" y1="63" x2="250" y2="107" stroke="#00E5FF" stroke-width="0.5"/>
+  <line x1="228" y1="85" x2="272" y2="85" stroke="#00E5FF" stroke-width="0.5"/>
+
+  <!-- Stark Logo on Back of Lid hinge -->
+  <rect x="194" y="137" width="12" height="4" fill="#FFB800"/>
+</svg>
